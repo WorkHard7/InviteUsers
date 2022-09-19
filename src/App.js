@@ -14,7 +14,7 @@ function App() {
   const [invites, setInvites] = useState([]);
 
   useEffect(() => {
-    fetch("https://reqres.in/api/users")
+    fetch("https://reqres.in/api/users", { method: "GET" })
       .then((res) => res.json())
       .then((json) => {
         setUsers(json.data);
