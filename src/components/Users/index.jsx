@@ -37,7 +37,11 @@ export const Users = ({
         <ul className="users-list">
           {items
             .filter((obj) => {
-              const fullName = (obj.first_name + obj.last_name).toLowerCase();
+              const fullName = (
+                obj.first_name +
+                " " +
+                obj.last_name
+              ).toLowerCase();
 
               return (
                 fullName.includes(searchValue.toLowerCase()) ||
